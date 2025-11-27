@@ -149,7 +149,8 @@ export default function Chat() {
   const isInputEmpty = !form.watch("message")?.trim();
 
   return (
-    <div className="flex h-screen items-center justify-center font-sans bg-background dark:bg-black">
+    /* COLOR CHANGE: Background changed to gradient from gray to orange tint */
+    <div className="flex h-screen items-center justify-center font-sans bg-gradient-to-br from-gray-50 via-orange-50/30 to-gray-100 dark:bg-gradient-to-br dark:from-gray-950 dark:via-orange-950/20 dark:to-black">
       <main className="w-full h-screen relative flex flex-col">
         {/* Header with improved backdrop blur */}
         <div className="sticky top-0 z-50 bg-background/80 dark:bg-black/80 backdrop-blur-xl border-b border-border/40">
@@ -181,7 +182,8 @@ export default function Chat() {
         </div>
 
         {/* Messages area with improved scrolling */}
-        <div className="flex-1 overflow-y-auto px-4 md:px-6 py-4 scroll-smooth">
+        /* COLOR CHANGE: Message area background with subtle pattern */
+        <div className="flex-1 overflow-y-auto px-4 md:px-6 py-4 scroll-smooth bg-gradient-to-b from-transparent via-white/40 to-transparent dark:via-gray-900/40">
           <div className="flex flex-col items-center justify-end min-h-full">
             <div className="w-full max-w-3xl space-y-4">
               {isClient ? (
@@ -228,12 +230,12 @@ export default function Chat() {
                           Message
                         </FieldLabel>
                         <div className="relative">
-                          {/* COLOR CHANGE: Input focus border changed to orange */}
+                          {/* COLOR CHANGE: Input focus border changed to orange + added visible border */}
                           <Input
                             {...field}
                             ref={inputRef}
                             id="chat-form-message"
-                            className="h-14 pr-14 pl-5 bg-card rounded-2xl border-2 border-border/50 focus:border-orange-500/50 focus:ring-orange-500/20 transition-colors shadow-sm resize-none"
+                            className="h-14 pr-14 pl-5 bg-white dark:bg-gray-900 rounded-2xl border-2 border-orange-300/60 dark:border-orange-600/40 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all shadow-lg shadow-orange-500/10 resize-none"
                             placeholder="Type your message here..."
                             disabled={status === "streaming"}
                             aria-invalid={fieldState.invalid}
