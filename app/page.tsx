@@ -182,7 +182,8 @@ export default function Chat() {
         </div>
 
         {/* Messages area with improved scrolling */}
-        <div className="flex-1 overflow-y-auto px-4 md:px-6 py-4 scroll-smooth">
+        /* COLOR CHANGE: Message area background with subtle pattern */
+        <div className="flex-1 overflow-y-auto px-4 md:px-6 py-4 scroll-smooth bg-gradient-to-b from-transparent via-white/40 to-transparent dark:via-gray-900/40">
           <div className="flex flex-col items-center justify-end min-h-full">
             <div className="w-full max-w-3xl space-y-4">
               {isClient ? (
@@ -229,12 +230,12 @@ export default function Chat() {
                           Message
                         </FieldLabel>
                         <div className="relative">
-                          {/* COLOR CHANGE: Input focus border changed to orange */}
+                          {/* COLOR CHANGE: Thick orange border - background kept as default */}
                           <Input
                             {...field}
                             ref={inputRef}
                             id="chat-form-message"
-                            className="h-14 pr-14 pl-5 bg-card rounded-2xl border-2 border-border/50 focus:border-orange-500/50 focus:ring-orange-500/20 transition-colors shadow-sm resize-none"
+                            className="h-14 pr-14 pl-5 rounded-2xl border-[3px] border-orange-500 dark:border-orange-600 focus:border-orange-600 dark:focus:border-orange-500 focus:ring-4 focus:ring-orange-500/30 transition-all shadow-lg shadow-orange-500/20 resize-none"
                             placeholder="Type your message here..."
                             disabled={status === "streaming"}
                             aria-invalid={fieldState.invalid}
