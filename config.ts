@@ -21,8 +21,8 @@ function getDateAndTime(): string {
 
 export const DATE_AND_TIME = getDateAndTime();
 
-export const AI_NAME = "Nezzzz";
-export const OWNER_NAME = "FirstName LastName";
+export const AI_NAME = "GradGyaan for BITSoM";
+export const OWNER_NAME = "Neha & Khushi";
 
 export const WELCOME_MESSAGE = `Hello! I'm ${AI_NAME}, an AI assistant created by ${OWNER_NAME}.`
 
