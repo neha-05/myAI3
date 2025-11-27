@@ -182,7 +182,6 @@ export default function Chat() {
         </div>
 
         {/* Messages area with improved scrolling */}
-        /* COLOR CHANGE: Message area background with subtle pattern */
         <div className="flex-1 overflow-y-auto px-4 md:px-6 py-4 scroll-smooth bg-gradient-to-b from-transparent via-white/40 to-transparent dark:via-gray-900/40">
           <div className="flex flex-col items-center justify-end min-h-full">
             <div className="w-full max-w-3xl space-y-4">
